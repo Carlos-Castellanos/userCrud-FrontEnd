@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Users {% endblock title %}
+
+{% block content %}
+
+<div class="row">
+
+    {% for user in users %}
+    <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+            <div class=" card-body">
+                <h5 class="card-title"> User #{{ user["id"] }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ user["first_name"] }} {{ user["last_name"] }}</h6>
+                <p class="card-text">User hobbies: {{ user["hobbies"] }}</p>
+                <a href="{{ url_for('display_user_profile', pk=user['id']) }}" class="card-link">Continue
+                    reading</a>
+            </div>
+        </div>
+        <br />
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ user[0]["first_name"] }}{% endblock title %}
+
+{% block content %}
+
+<h1>Information</h1>
+<h2>{{ user[0]["first_name"] }} {{ user[0]["last_name"] }}</h2>
+<h5>Hobbies {{ user[0]["hobbies"]}}</h5>
+<p>Active Status: {{ user[0]["active"]}} </p>
+
+
+{% endblock content %}

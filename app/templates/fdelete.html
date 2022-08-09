@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} delete {% endblock title %}
+
+{% block content %}
+
+<form method="post" action="{{url_for('procesar')}}">
+    <input name="iduser" required type="number" placeholder="id user">
+
+    <input type="submit" value="delete">
+</form>
+
+
+{% endblock content %}
